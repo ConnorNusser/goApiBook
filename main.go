@@ -9,7 +9,7 @@ import (
 
 func main() {
 	router := gin.Default()
-	router.GET("/", getBooks)
+	router.GET("/books", getBooks)
 	router.GET("/first", getBooksFirst)
 	router.Run("localhost:8080")
 }
