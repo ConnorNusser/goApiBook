@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -13,9 +12,6 @@ func main() {
 	router.GET("/", getBooks)
 	router.GET("/first", getBooksFirst)
 	router.Run("localhost:8080")
-	for _, value := range books {
-		fmt.Println(value)
-	}
 }
 func getBooks(c *gin.Context) {
 	c.IndentedJSON(http.StatusOK, books)
